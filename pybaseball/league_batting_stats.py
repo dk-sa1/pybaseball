@@ -5,11 +5,8 @@ from typing import Optional
 import pandas as pd
 from bs4 import BeautifulSoup
 
-from . import cache
-from .utils import most_recent_season, sanitize_date_range
-from .datasources.bref import BRefSession
-
-session = BRefSession()
+from pybaseball import cache
+from pybaseball.utils import most_recent_season, sanitize_date_range
 
 
 def get_soup(start_dt: date, end_dt: date) -> BeautifulSoup:
